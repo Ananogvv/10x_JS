@@ -97,4 +97,26 @@ function turnBackTime(){
 
 //Exercise 11:  Batman’s Secret Identity – Function Closures
 
-//Closure-ბზე თავიდან ვუყურებ ლექციას და შემდეგ დავასრულებ 
+function batman() {
+    let batmanSay = "I am Batman!";
+
+    function batmanIdentity(){
+        console.log(batmanSay);
+
+    }
+    return batmanIdentity;
+}
+const batmanClosure = batman();
+batmanClosure();
+
+//Hard - Exercise 12: The Enchanted Mirror - Higher-Order Functions
+
+function magicMirror(message, transformFunction) {
+    const transformedMessage =  transformFunction(message);
+    return `The mirror says: ${transformedMessage}`;
+}
+
+const resultMessage = magicMirror("Will I be rich?", str => str.toUpperCase());
+console.log(resultMessage);
+
+
